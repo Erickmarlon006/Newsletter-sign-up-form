@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: hsl(234, 29%, 20%);
+  background-color: hsl(235, 18%, 26%);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 80%;
+  max-width: 900px;
+  min-width: 880px;
+  border-radius: 2rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.content,
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.content {
+  padding-inline: 8%;
+}
+.content div {
+  padding-bottom: 2rem;
+}
+.content h1 {
+  font-size: 3em;
+  font: bold;
+}
+.content > p {
+  margin-block: 2rem;
+  font-size: 16px;
+}
+span img {
+  width: 20px;
+  margin-right: 10px;
+}
+span {
+  display: flex;
+}
+span * {
+  padding-bottom: 10px;
+}
+#gmail-input,
+#submit-btn {
+  border: none;
+  border-radius: 0.4rem;
+  outline: none;
+  margin-block: 10px;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 45px;
+}
+#gmail-input {
+  border: 1px solid gray;
+  padding-inline: 1rem;
+}
+
+#gmail-input.error {
+  border: 1px solid red;
+  color: red;
+  background-color: rgb(255, 210, 210);
+}
+#submit-btn {
+  color: white;
+  background-color: hsl(234, 29%, 20%);
+  cursor: pointer;
+  font-weight: bold;
+}
+#submit-btn:hover,
+#dismiss-btn:hover {
+  background: linear-gradient(to right, rgb(255, 69, 100), rgb(228, 91, 0));
+}
+#sign-up-form {
+  width: 100%;
+}
+#sign-up-form label {
+  font-weight: bold;
+}
+.sign-up-image {
+  height: calc(100% - 40px);
+  padding-inline: 20px;
+  min-width: 400px;
+}
+.error-message {
+  display: none;
+  color: red;
+  position: relative;
+  font-size: 0.8em;
+  top: -15px;
+  width: fit-content;
+  right: -60%;
+}
+.success-message {
+  height: 380px;
+  width: 370px;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+.success-message h1 {
+  padding-top: 1rem;
+  line-height: 1em;
+  font-size: 2.6em;
+}
+.success-message img {
+  width: 50px;
+}
+.success-message p {
+  font-size: 0.8em;
+  padding-block: 1.2rem;
+}
+#dismiss-btn {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: hsl(235, 18%, 26%);
+  height: 45px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 385px) {
+  body {
+    width: 100%;
+  }
+  .container {
+    flex-direction: column-reverse;
+    height: fit-content;
+    border-radius: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: none;
+  }
+  .content {
+    padding-block: 2rem;
+  }
+  figure {
+    width: 100%;
+  }
+  .sign-up-image {
+    object-fit: cover;
+    object-position: top;
+    height: 60vh;
+    padding: 0;
+    border-radius: 1rem;
+    width: 100%;
+    min-width: 0;
+  }
+  #gmail-input,
+  #submit-btn,
+  #dismiss-btn {
+    height: 50px;
+  }
+}
